@@ -1,4 +1,4 @@
-const files = import.meta.globEager("./*")
+const files = import.meta.globEager("./*.j*")
 const modules = {};
 
 for (const key in files) {
