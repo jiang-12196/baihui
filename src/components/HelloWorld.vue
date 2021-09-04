@@ -23,7 +23,7 @@ const onChange = (newIndex) => {
       <div>{{item.length}}</div>
     </div>
   </div>
-  <van-image-preview v-model:show="show" :images="images[index]" :start-position="0" @change="onChange">
+  <van-image-preview v-model:show="show" closeable :images="images[index]" :start-position="0" @change="onChange">
   </van-image-preview>
 </div>
 </template>
@@ -45,6 +45,7 @@ const onChange = (newIndex) => {
       justify-content: center;
       width: 30%;
       position: relative;
+      margin: 5px 0;
       div {
         text-align: center;
         font-size: 12px;
