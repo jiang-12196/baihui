@@ -52,6 +52,7 @@ const onChange = (newIndex) => {
     }
     img {
       margin: 10px 1%;
+      width: 100%;
     }
   }
 }
