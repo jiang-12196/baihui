@@ -15,7 +15,7 @@ const onChange = (newIndex) => {
 
 <template>
 <div class="root-div">
-  <div class="id-title">柏慧嫁衣</div>
+  <div class="id-title">栢慧嫁衣</div>
   <div class="image-content">
     <div v-for="(item, index) in images" :key="item" class="image-item">
       <img :src="item" @click="showImage(index)"/>
