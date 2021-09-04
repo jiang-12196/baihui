@@ -9,7 +9,7 @@ const showImage = (newIndex) => {
 const show = ref(false);
 const index = ref(0);
 const onChange = (newIndex) => {
-  index.value = newIndex;
+  // index.value = newIndex;
 };
 </script>
 
@@ -18,12 +18,12 @@ const onChange = (newIndex) => {
   <div class="id-title">栢慧婚纱</div>
   <div class="image-content">
     <div v-for="(item, index) in images" :key="item" class="image-item">
-      <img :src="item" @click="showImage(index)"/>
-      <div>{{item.split('/')[item.split('/').length-1].split('.')[0]}}</div>
+      <img :src="item[0]" @click="showImage(index)"/>
+      <!-- <div>{{item[0].split('/')[item[0].split('/').length-1].split('.')[0]}}</div> -->
+      <div>{{item.length}}</div>
     </div>
   </div>
-  <van-image-preview v-model:show="show" :images="images" :start-position="index" @change="onChange">
-    <template v-slot:index>第{{ index + 1 }}页</template>
+  <van-image-preview v-model:show="show" :images="images[index]" :start-position="0" @change="onChange">
   </van-image-preview>
 </div>
 </template>
@@ -60,6 +60,7 @@ const onChange = (newIndex) => {
     img {
       margin: 10px 1%;
       width: 100%;
+      height: 100%;
     }
   }
 }
