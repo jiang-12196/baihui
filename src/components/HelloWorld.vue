@@ -44,10 +44,17 @@ const onChange = (newIndex) => {
       flex-direction: column;
       justify-content: center;
       width: 30%;
+      position: relative;
       div {
         text-align: center;
         font-size: 12px;
-        color: #ccc;
+        position: absolute;
+        left: 4px;
+        bottom: 20px;
+        background: #82704A;
+        color: #fff;
+        padding: 2px 4px;
+        border-radius: 4px;
       }
     }
     img {
